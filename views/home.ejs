@@ -1,0 +1,49 @@
+<%- include('header'); -%>
+
+<div class="container">
+
+    <nav class="nav-bar">
+        <div class="logo"><h2>Notes</h2></div>
+        <div class="nav-items">
+            <ul class="items">
+                <li>Home</li>
+                <li>About me</li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/delete">Delete</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="head">
+        <div class="card">
+            <div><img id="me" src="/img/programmer.png" alt="me"></div>
+            <div><img id="text" src="/img/capture.png" alt="text"></div>
+        </div>
+    </div>
+
+    <div class="articles">
+        <hr> 
+        <div class="title">
+            <h2>Notes</h2>
+        </div>
+        <div class="content">
+            <%content.forEach(data => {%>
+
+                <h3 id="data-title"><%=data.title%> :</h3>
+                <p id="data-content"><%= data.content %> <a id="arrow" href="/note/<%=data.title%>">🠮</a> </p>
+                <br><br><br><hr id="space">
+            
+            <%});%>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="social-media">
+            <i class='fab fa-paypal' style='font-size:30px'></i>
+            <i class='fab fa-instagram' style='font-size:30px'></i>
+            <i class='fab fa-facebook' style='font-size:30px'></i>
+        </div>
+        <p id="copy-right">Made with 🖤 by Bashar.</p>
+    </div>
+</div>
+
+<%- include('footer'); -%>

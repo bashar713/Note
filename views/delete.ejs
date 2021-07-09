@@ -1,0 +1,20 @@
+<%- include('header'); -%> 
+
+    <div class="box">
+        <h3 id="title">Delete article</h3>
+        <div class="form-data">
+            <form action="/delete" method="post">
+                <label for="delete">Enter article title</label>
+                <input type="text" name="delete">
+                <br>
+                <button id="submit" type="submit">Delete</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="home">
+        <a href="/"> <i id="home-page-logo" class="fas fa-home"></i></a>
+    </div>
+
+<%- include('footer'); -%> 

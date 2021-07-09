@@ -1,0 +1,23 @@
+<%- include('header'); -%>
+
+    <div class="box">
+        <h3 id="title">Upload Notes</h3>
+    
+        <div class="form-data">
+           <form action="/" method="post">
+                    <label>Title</label>
+                    <input id="title-input" type="text" autocomplete="off" name="title">
+                    <br>
+                    <label>Content</label>
+                    <textarea id="content-input" name="content"  rows="6"></textarea>
+                    <br>
+                    <button id="submit" value="submit" type="submit">Upload</button>
+            </form>  
+        </div>
+    </div>
+
+    <div class="home">
+        <a href="/"> <i id="home-page-logo" class="fas fa-home"></i></a>
+    </div>
+
+<%- include('footer'); -%>  
